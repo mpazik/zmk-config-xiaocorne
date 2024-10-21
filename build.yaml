@@ -20,5 +20,6 @@
 include:
   - board: seeeduino_xiao_ble
     shield: corny_left
+    snippet: zmk-usb-logging
   - board: seeeduino_xiao_ble
     shield: corny_right
