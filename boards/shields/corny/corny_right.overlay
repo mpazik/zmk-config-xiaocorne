@@ -1,15 +1,17 @@
 
 #include "corny.dtsi"
 
-&default_transform {
-	col-offset = <6>;
-};
-
 &five_column_transform {
 	col-offset = <6>;
 };
 
 &kscan0 {
+	row-gpios
+		= <&gpio0 2 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 3 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 28 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		, <&gpio0 29 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+		;
 	col-gpios
 		= <&gpio1 11 GPIO_ACTIVE_HIGH>	//Col0
 		, <&gpio1 12 GPIO_ACTIVE_HIGH>  //Col1
