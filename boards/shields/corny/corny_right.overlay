@@ -1,6 +1,10 @@
 
 #include "corny.dtsi"
 
+&default_transform {
+	col-offset = <6>;
+};
+
 &five_column_transform {
 	col-offset = <6>;
 };
