@@ -52,7 +52,7 @@
 
         combo_bksp {
             timeout-ms = <COMBO_TIMEOUT>;
-            key-positions = <19 20>;
+            key-positions = <18 19>;
             bindings = <&kp BSPC>;
         };
 
