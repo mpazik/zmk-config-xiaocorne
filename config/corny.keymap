@@ -126,11 +126,6 @@
             key-positions = <22 21>;
         };
 
-        rpar {
-            bindings = <&kp RIGHT_PARENTHESIS>;
-            key-positions = <20 19>;
-        };
-
         eq {
             bindings = <&kp EQUAL>;
             key-positions = <10 11>;
@@ -187,8 +182,8 @@
             //             | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&kp TAB         &kp Q        &kp W  &kp E         &kp R            &kp T        &kp Y      &kp U    &kp I           &kp O    &kp P           &trans
-&kp ESCAPE      &kp A        &kp S  &kp D         &kp F            &kp G        &kp H      &kp J    &kp K           &kp L    &bh 4 SQT       &trans
+&bh 4 TAB       &kp Q        &kp W  &kp E         &kp R            &kp T        &kp Y      &kp U    &kp I           &kp O    &kp P           &kp BACKSPACE
+&kp ESCAPE      &kp A        &kp S  &kp D         &kp F            &kp G        &kp H      &kp J    &kp K           &kp L    &bh 3 SEMI      &kp SQT
 &kp LEFT_SHIFT  &mt LSHFT Z  &kp X  &kp C         &kp V            &kp B        &kp N      &kp M    &kp COMMA       &kp DOT  &mt RSHFT FSLH  &kp RIGHT_SHIFT
                                     &kp LEFT_ALT  &mt LCMD ESCAPE  &kp SPACE    &kp ENTER  &kp TAB  &mt RALT LC(V)
             >;
@@ -196,12 +191,12 @@
             label = "BASE";
         };
 
-        lower_layer {
+        numbers {
             bindings = <
-&trans  &kp F1   &kp F2    &kp F3             &kp F4     &kp F5          &kp PG_UP        &kp N7          &kp N8         &kp N9          &kp BSPC         &trans
-&trans  &kp F6   &kp F7    &kp UP_ARROW       &kp F8     &kp F9          &bh 0 PAGE_DOWN  &bh 1 NUMBER_4  &bh 2 N5       &bh 3 NUMBER_6  &bh 4 BACKSLASH  &trans
-&trans  &kp F10  &kp LEFT  &kp DOWN           &kp RIGHT  &kp F12         &kp INS          &kp N1          &kp N2         &kp N3          &kp LC(RET)      &trans
-                           &kp LC(LA(LSHFT))  &kp F11    &mt RALT RET    &mt LCTRL SPACE  &kp N0          &mt LSHFT DOT
+&trans  &kp F1   &kp F2   &kp F3   &kp F4   &kp F5     &kp MINUS  &kp N7  &kp N8  &kp N9  &kp BSPC         &trans
+&trans  &kp F6   &kp F7   &kp F8   &kp F9   &kp F10    &kp PLUS   &kp N4  &kp N5  &kp N6  &bh 4 BACKSLASH  &trans
+&trans  &kp F11  &kp F12  &kp F13  &kp F14  &kp F15    &kp N0     &kp N1  &kp N2  &kp N3  &kp LC(RET)      &trans
+                          &trans   &trans   &trans     &trans     &trans  &trans
             >;
 
             label = "Numbers";
@@ -218,7 +213,7 @@
             label = "Symbols";
         };
 
-        hyperland {
+        nav {
             bindings = <
 &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp LG(Q)     &kp LG(F)     &kp LG(E)   &trans  &trans       &to 0   &to 1   &to 2   &to 3   &to 4   &trans
@@ -227,12 +222,12 @@
             >;
         };
 
-        danger_layer {
+        system_layer {
             bindings = <
-&trans  &bootloader  &kp AT  &kp HASH       &kp PAUSE_BREAK  &kp SLCK           &kp C_VOL_UP   &hm LC(V) LC(C)  &none          &kp LC(LA(DEL))  &bootloader  &trans
-&trans  &trans       &trans  &kp LC(LSHFT)  &mt LSHFT UP     &mt LCTRL PSCRN    &kp C_VOL_DN   &trans           &trans         &kp UP           &kp SEMI     &trans
-&trans  &kp LNLCK    &trans  &kp LEFT       &kp DOWN         &kp RIGHT          &kp C_MUTE     &trans           &kp LEFT       &kp DOWN         &kp RIGHT    &trans
-                             &kp LG(Z)      &kp LG(X)        &kp LG(C)          &kp LC(LA(W))  &kp LC(LA(P))    &kp LC(LA(R))
+&trans       &bootloader  &kp AT  &kp HASH       &kp C_BRI_UP   &kp C_VOLUME_UP      &kp C_VOL_UP   &kp C_BRI_UP   &none          &kp LC(LA(DEL))  &bootloader  &trans
+&bootloader  &trans       &trans  &kp LC(LSHFT)  &kp C_BRI_DEC  &kp C_VOLUME_DOWN    &kp C_VOL_DN   &kp C_BRI_DEC  &trans         &kp UP           &kp SEMI     &trans
+&trans       &kp LNLCK    &trans  &kp LEFT       &kp DOWN       &kp K_MUTE           &kp C_MUTE     &trans         &kp LEFT       &kp DOWN         &kp RIGHT    &trans
+                                  &kp LG(Z)      &kp LG(X)      &kp LG(C)            &kp LC(LA(W))  &kp LC(LA(P))  &kp LC(LA(R))
             >;
 
             label = "**DANGER**";
