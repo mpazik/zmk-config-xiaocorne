@@ -135,7 +135,6 @@
             bindings = <&kp EQUAL>;
             key-positions = <10 11>;
         };
-        
     };
 };
 
@@ -188,10 +187,10 @@
             //             | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q        &kp W  &kp E           &kp R                     &kp T            &kp Y      &kp U    &kp I           &kp O    &kp P           &trans
-&trans  &kp A        &kp S  &kp D           &kp F                     &kp G            &kp H      &kp J    &kp K           &kp L    &bh 4 SQT       &trans
-&trans  &mt LSHFT Z  &kp X  &kp C           &kp V                     &kp B            &kp N      &kp M    &kp COMMA       &kp DOT  &mt RSHFT FSLH  &trans
-                            &mt LGUI MINUS  &mt LEFT_SHIFT SEMICOLON  &mt LCTRL RET    &kp SPACE  &kp TAB  &mt RALT LC(V)
+&kp TAB         &kp Q        &kp W  &kp E         &kp R            &kp T        &kp Y      &kp U    &kp I           &kp O    &kp P           &trans
+&kp ESCAPE      &kp A        &kp S  &kp D         &kp F            &kp G        &kp H      &kp J    &kp K           &kp L    &bh 4 SQT       &trans
+&kp LEFT_SHIFT  &mt LSHFT Z  &kp X  &kp C         &kp V            &kp B        &kp N      &kp M    &kp COMMA       &kp DOT  &mt RSHFT FSLH  &kp RIGHT_SHIFT
+                                    &kp LEFT_ALT  &mt LCMD ESCAPE  &kp SPACE    &kp ENTER  &kp TAB  &mt RALT LC(V)
             >;
 
             label = "BASE";
@@ -237,6 +236,15 @@
             >;
 
             label = "**DANGER**";
+        };
+
+        layer_5 {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans  &trans  &trans    &trans  &trans  &trans
+            >;
         };
     };
 };
