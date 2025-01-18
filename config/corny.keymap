@@ -65,10 +65,10 @@
 
         default_layer {
             bindings = <
-&bootloader     &kp Q        &kp W  &kp E         &kp R            &kp T        &kp Y      &kp U    &kp I           &kp O    &kp P           &bootloader
-&kp ESCAPE      &kp A        &kp S  &kp D         &kp F            &kp G        &kp H      &kp J    &kp K           &kp L    &bh 3 SEMI      &kp SQT
-&kp LEFT_SHIFT  &mt LSHFT Z  &kp X  &kp C         &kp V            &kp B        &kp N      &kp M    &kp COMMA       &kp DOT  &mt RSHFT FSLH  &kp RIGHT_SHIFT
-                                    &bootloader  &mt LCMD ESCAPE  &kp SPACE    &kp ENTER  &kp TAB  &mt RALT LC(V)
+&kp A  &kp Q        &kp W  &kp E         &kp R            &kp T        &kp Y      &kp U    &kp I           &kp O    &kp P           &kp A
+&kp B  &kp A        &kp S  &kp D         &kp F            &kp G        &kp H      &kp J    &kp K           &kp L    &bh 3 SEMI      &kp B
+&kp C  &mt LSHFT Z  &kp X  &kp C         &kp V            &kp B        &kp N      &kp M    &kp COMMA       &kp DOT  &mt RSHFT FSLH  &kp C
+                           &bootloader   &mt LCMD ESCAPE  &kp SPACE    &kp ENTER  &kp TAB  &kp D
             >;
 
             label = "BASE";
