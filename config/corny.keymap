@@ -112,17 +112,6 @@
 &trans       &kp LNLCK    &trans  &kp LEFT       &kp DOWN       &kp K_MUTE           &kp C_MUTE     &trans         &kp LEFT       &kp DOWN         &kp RIGHT    &trans
                                   &kp LG(Z)      &kp LG(X)      &kp LG(C)            &kp LC(LA(W))  &kp LC(LA(P))  &kp LC(LA(R))
             >;
-
-            label = "**DANGER**";
-        };
-
-        layer_5 {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
-            >;
         };
     };
 };
