@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/outputs.h>
 
 #define COMBO_TIMEOUT 60
 #define DEFAULT 0
@@ -17,9 +16,7 @@
 #define DANGER  4
 
 / {
-    combos {
-        compatible = "zmk,combos";
-    };
+    combos { compatible = "zmk,combos"; };
 };
 
 &caps_word { continue-list = <UNDERSCORE MINUS BACKSPACE DELETE HOME END LEFT RIGHT>; };
@@ -71,52 +68,41 @@
             //             | GUI | LWR | ENT |   | SPC | RSE  | ALT |
 
             bindings = <
-&trans  &kp Q        &kp W  &kp E           &kp R                     &kp T            &kp Y      &kp U    &kp I           &kp O    &kp P           &trans
-&trans  &kp A        &kp S  &kp D           &kp F                     &kp G            &kp H      &kp J    &kp K           &kp L    &bh 4 SQT       &trans
-&trans  &mt LSHFT Z  &kp X  &kp C           &kp V                     &kp B            &kp N      &kp M    &kp COMMA       &kp DOT  &mt RSHFT FSLH  &trans
-                            &mt LGUI MINUS  &mt LEFT_SHIFT SEMICOLON  &mt LCTRL RET    &kp SPACE  &kp TAB  &mt RALT LC(V)
+&kp TAB     &kp Q        &kp W  &kp E         &kp R                 &kp T        &kp Y      &kp U         &kp I          &kp O    &kp P            &kp BACKSLASH
+&kp ESCAPE  &kp A        &kp S  &kp D         &kp F                 &kp G        &kp H      &kp J         &kp K          &kp L    &bh 2 SEMICOLON  &kp SQT
+&kp LSHFT   &mt LSHFT Z  &kp X  &kp C         &kp V                 &kp B        &kp N      &kp M         &kp COMMA      &kp DOT  &mt RSHFT FSLH   &kp RSHFT
+                                &kp LEFT_ALT  &mt LEFT_COMMAND TAB  &kp SPACE    &kp ENTER  &lt 1 ESCAPE  &kp RIGHT_ALT
             >;
 
             label = "BASE";
         };
 
-        lower_layer {
-            bindings = <
-&trans  &kp F1   &kp F2    &kp F3             &kp F4     &kp F5          &kp PG_UP        &kp N7          &kp N8         &kp N9          &kp BSPC         &trans
-&trans  &kp F6   &kp F7    &kp UP_ARROW       &kp F8     &kp F9          &bh 0 PAGE_DOWN  &bh 1 NUMBER_4  &bh 2 N5       &bh 3 NUMBER_6  &bh 4 BACKSLASH  &trans
-&trans  &kp F10  &kp LEFT  &kp DOWN           &kp RIGHT  &kp F12         &kp INS          &kp N1          &kp N2         &kp N3          &kp LC(RET)      &trans
-                           &kp LC(LA(LSHFT))  &kp F11    &mt RALT RET    &mt LCTRL SPACE  &kp N0          &mt LSHFT DOT
-            >;
-
-            label = "Numbers";
-        };
-
         raise_layer {
             bindings = <
-&trans  &kp EXCL  &kp AT     &kp HASH   &kp DLLR      &kp PRCNT            &kp CARET    &kp AMPS       &kp KP_MULTIPLY   &kp LPAR           &kp RPAR    &trans
-&trans  &kp TAB   &kp CAPS   &kp F13    &out OUT_TOG  &kp LGUI             &bh 0 MINUS  &bh 1 EQUAL    &bh 2 LEFT_BRACE  &bh 3 RIGHT_BRACE  &bh 4 PIPE  &trans
-&trans  &kp ESC   &kp GRAVE  &kp QMARK  &kp F9        &kp F17              &kp UNDER    &kp PLUS       &kp LBKT          &kp RBKT           &kp BSLH    &trans
-                             &kp LCTRL  &kp LALT      &mt LSHFT LS(INS)    &kp RET      &kp SEMICOLON  &mt RALT TILDE
+&kp GRAVE   &kp N1  &kp N2  &kp N3    &kp N4    &kp N5       &kp N6     &kp N7     &kp N9    &kp N0    &kp BSLH  &none
+&kp ESC     &kp F1  &kp F2  &kp F3    &kp F4    &kp F5       &kp N8     &kp MINUS  &kp LBKT  &kp RBKT  &kp SQT   &none
+&kp LSHIFT  &kp F6  &kp F7  &kp F8    &kp F9    &kp F10      &kp UNDER  &kp UNDER  &kp LT    &kp GT    &kp FSLH  &none
+                            &kp LALT  &kp LCMD  &kp SPACE    &kp ENTER  &none      &kp RALT
             >;
 
             label = "Symbols";
         };
 
-        hyperland {
+        navigation {
             bindings = <
-&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_NXT  &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(Q)     &kp LG(F)     &kp LG(E)   &trans  &trans       &to 0   &to 1   &to 2   &to 3   &to 4   &trans
-&trans  &kp LG(R)     &kp LG(D)     &trans      &trans  &trans       &trans  &trans  &trans  &trans  &trans  &trans
-                                    &trans      &trans  &kp LG(C)    &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &kp DEL        &kp LBKT    &kp UP    &kp RBKT   &none  &bootloader
+&trans  &trans  &trans  &trans  &trans  &trans    &kp BACKSPACE  &kp LEFT    &kp DOWN  &kp RIGHT  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans    &none          &none       &none     &none      &none  &none
+                        &trans  &trans  &trans    &kp ENTER      &kp ESCAPE  &none
             >;
         };
 
-        danger_layer {
+        system {
             bindings = <
-&trans  &bootloader  &kp AT  &kp HASH       &kp PAUSE_BREAK  &kp SLCK           &kp C_VOL_UP   &hm LC(V) LC(C)  &none          &kp LC(LA(DEL))  &bootloader  &trans
-&trans  &trans       &trans  &kp LC(LSHFT)  &mt LSHFT UP     &mt LCTRL PSCRN    &kp C_VOL_DN   &trans           &trans         &kp UP           &kp SEMI     &trans
-&trans  &kp LNLCK    &trans  &kp LEFT       &kp DOWN         &kp RIGHT          &kp C_MUTE     &trans           &kp LEFT       &kp DOWN         &kp RIGHT    &trans
-                             &kp LG(Z)      &kp LG(X)        &kp LG(C)          &kp LC(LA(W))  &kp LC(LA(P))    &kp LC(LA(R))
+&bootloader  &kp TAB     &bt BT_NXT  &kp C_BRI_UP      &kp C_VOL_UP  &kp C_NEXT    &kp STAR   &kp N7  &kp N8   &kp N9  &none      &kp K_LOCK
+&kp ESC      &kp ESCAPE  &bt BT_PRV  &kp LC(C_BRI_DN)  &kp C_VOL_DN  &kp C_PREV    &kp MINUS  &kp N4  &kp N5   &kp N6  &none      &kp LANG1
+&kp LSHIFT   &kp LSHFT   &bt BT_CLR  &kp C_BRI_AUTO    &kp C_MUTE    &kp C_PP      &kp PLUS   &kp N1  &kp N2   &kp N3  &kp SLASH  &kp LANG2
+                                     &kp LALT          &kp LCMD      &none         &kp ENTER  &kp N0  &kp DOT
             >;
 
             label = "**DANGER**";
