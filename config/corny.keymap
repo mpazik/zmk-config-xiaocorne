@@ -62,9 +62,9 @@
 
         system_layer {
             bindings = <
-&bootloader  &bt BT_CLR  &bt BT_NXT  &kp C_BRI_UP    &kp C_VOL_UP  &kp C_NEXT    &msc SCRL_LEFT  &mmv MOVE_UP    &msc SCRL_RIGHT  &msc SCRL_UP    &none       &kp K_LOCK
-&trans       &kp ESCAPE  &bt BT_PRV  &kp C_BRI_DN    &kp C_VOL_DN  &kp C_PREV    &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &msc SCRL_DOWN  &caps_word  &kp PSCRN
-&trans       &kp LSHFT   &kp LCTRL   &kp C_BRI_AUTO  &kp C_MUTE    &kp C_PP      &none           &mkp MB4        &mkp MB5         &kp LANG1       &kp LANG2   &kp LANG3
+&bootloader  &bt BT_CLR  &bt BT_NXT  &kp C_BRI_UP    &kp C_VOL_UP  &kp C_NEXT    &msc SCRL_UP    &msc SCRL_LEFT  &mmv MOVE_UP     &msc SCRL_RIGHT  &none       &kp K_LOCK
+&trans       &kp ESCAPE  &bt BT_PRV  &kp C_BRI_DN    &kp C_VOL_DN  &kp C_PREV    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &caps_word  &kp PSCRN
+&trans       &kp LSHFT   &kp LCTRL   &kp C_BRI_AUTO  &kp C_MUTE    &kp C_PP      &none           &mkp MB4        &mkp MB5         &kp LANG1        &kp LANG2   &kp LANG3
                                      &kp LALT        &kp LCMD      &none         &mkp MB1        &mkp MB2        &mkp MB3
             >;
         };
