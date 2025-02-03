@@ -46,7 +46,7 @@
             bindings = <
 &trans  &kp COMMA     &kp N7        &kp N8        &kp N9       &kp STAR      &kp DEL        &kp LBKT   &kp UP    &kp RBKT   &none  &bootloader
 &trans  &kp SLASH     &kp N4        &kp N5        &kp N6       &kp MINUS     &kp BACKSPACE  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
-&trans  &mt LSHFT N0  &mt LSHFT N1  &kp N2        &kp N3       &kp PLUS      &kp DOT        &kp COMMA  &none     &none      &none  &none
+&trans  &mt LSHFT N0  &mt LCTRL N1  &kp N2        &kp N3       &kp PLUS      &kp DOT        &kp COMMA  &none     &none      &none  &none
                                     &mt LALT DOT  &mt LCMD N0  &kp SPACE     &kp ENTER      &kp ESC    &none
             >;
         };
