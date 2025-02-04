@@ -17,10 +17,10 @@
 
         default_layer {
             bindings = <
-&kp TAB    &kp Q        &kp W        &kp E         &kp R           &kp T          &kp Y      &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
-&kp ESC    &kp A        &kp S        &kp D         &kp F           &kp G          &kp H      &kp J      &kp K      &kp L    &lt 2 SEMICOLON  &kp SQT
-&kp LSHFT  &mt LSHFT Z  &mt LCTRL X  &kp C         &kp V           &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &mt RSHFT FSLH   &kp RSHFT
-                                     &mt LALT TAB  &mt LCMD SPACE  &lt 3 SPACE    &kp ENTER  &lt 1 ESC  &kp RALT
+&kp TAB    &kp Q        &kp W        &kp E     &kp R           &kp T          &kp Y      &kp U      &kp I      &kp O    &kp P            &kp BACKSLASH
+&kp ESC    &lt 4 A      &kp S        &kp D     &kp F           &kp G          &kp H      &kp J      &kp K      &kp L    &lt 2 SEMICOLON  &kp SQT
+&kp LSHFT  &mt LSHFT Z  &mt LCTRL X  &kp C     &kp V           &kp B          &kp N      &kp M      &kp COMMA  &kp DOT  &mt RSHFT FSLH   &kp RSHFT
+                                     &kp LALT  &mt LCMD TAB    &lt 3 SPACE    &kp ENTER  &lt 1 ESC  &kp RALT
             >;
         };
 
@@ -53,10 +53,10 @@
 
 //        system_layer {
 //            bindings = <
-//&bootloader  &bt BT_CLR  &bt BT_NXT  &kp C_BRI_UP    &kp C_VOL_UP  &kp C_NEXT    &kp STAR   &kp N7  &kp N8   &kp N9  &none      &kp K_LOCK
-//&trans       &kp ESCAPE  &bt BT_PRV  &kp C_BRI_DN    &kp C_VOL_DN  &kp C_PREV    &kp MINUS  &kp N4  &kp N5   &kp N6  &none      &kp LANG1
-//&trans       &kp LSHFT   &kp LCTRL   &kp C_BRI_AUTO  &kp C_MUTE    &kp C_PP      &kp PLUS   &kp N1  &kp N2   &kp N3  &kp SLASH  &kp LANG2
-//                                     &kp LALT        &kp LCMD      &none         &kp ENTER  &kp N0  &kp DOT
+//&bootloader  &bt BT_CLR  &bt BT_NXT  &kp C_BRI_UP    &kp C_VOL_UP  &kp C_NEXT    &kp STAR   &kp N7   &kp N8   &kp N9  &none      &kp K_LOCK
+//&trans       &kp ESCAPE  &bt BT_PRV  &kp C_BRI_DN    &kp C_VOL_DN  &kp C_PREV    &kp MINUS  &kp N4   &kp N5   &kp N6  &none      &kp LANG1
+//&trans       &kp LSHFT   &kp LCTRL   &kp C_BRI_AUTO  &kp C_MUTE    &kp C_PP      &kp PLUS   &kp N1   &kp N2   &kp N3  &kp SLASH  &kp LANG2
+//                                     &kp LALT        &kp LCMD      &none         &kp ENTER  &kp DOT  &kp NO
 //            >;
 //        };
 
@@ -66,6 +66,15 @@
 &bootloader  &kp ESCAPE  &bt BT_PRV  &kp C_BRI_DN    &kp C_VOL_DN  &kp C_PREV    &msc SCRL_DOWN  &mmv MOVE_LEFT  &mmv MOVE_DOWN   &mmv MOVE_RIGHT  &caps_word  &kp PSCRN
 &trans       &kp LSHFT   &kp LCTRL   &kp C_BRI_AUTO  &kp C_MUTE    &kp C_PP      &none           &mkp MB4        &mkp MB5         &kp LANG1        &kp LANG2   &kp LANG3
                                      &kp LALT        &kp LCMD      &none         &mkp MB1        &mkp MB2        &mkp MB3
+            >;
+        };
+
+        left_nav {
+            bindings = <
+&trans  &none      &kp LBKT   &kp UP      &kp RBKT     &kp DEL        &kp STAR   &kp N7   &kp N8     &kp N9  &none  &none
+&trans  &none      &kp LEFT   &kp DOWN    &kp RIGHT    &kp BACKSPACE  &kp MINUS  &kp N4   &kp N5     &kp N6  &none  &none
+&trans  &kp LSHFT  &kp LCTRL  &kp ESC     &none        &none          &kp PLUS   &kp N1   &kp N2     &kp N3  &none  &none
+                              &trans      &trans       &kp ENTER      &kp ENTER  &kp DOT  &kp N0
             >;
         };
     };
