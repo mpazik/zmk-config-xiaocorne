@@ -27,8 +27,8 @@
         number_layer {
             bindings = <
 &kp GRAVE   &kp N1        &kp N2        &kp N3  &kp N4  &kp N5       &kp N6     &kp N7     &kp N9    &kp N0    &kp BSLH  &none
-&kp ESC     &kp F1        &kp F2        &kp F3  &kp F4  &kp F5       &kp N8     &kp MINUS  &kp LBKT  &kp RBKT  &kp SQT   &none
-&kp LSHIFT  &mt LSHFT F6  &mt LCTRL F7  &kp F8  &kp F9  &kp F10      &kp EQUAL  &kp UNDER  &kp LT    &kp GT    &kp FSLH  &none
+&kp ESC     &kp F1        &kp F2        &kp F3  &kp F4  &kp F5       &kp N8     &kp UNDER  &kp LBKT  &kp RBKT  &kp SQT   &none
+&kp LSHIFT  &mt LSHFT F6  &mt LCTRL F7  &kp F8  &kp F9  &kp F10      &kp EQUAL  &kp MINUS  &kp LT    &kp GT    &kp FSLH  &none
                                         &trans  &trans  &kp SPACE    &kp ENTER  &none      &kp RALT
             >;
         };
@@ -42,12 +42,13 @@
 //            >;
 //        };
 
+// left hand needs to be transparent as when you type fast the nav might not be deactivated fast en.ough
         nav_layer {
             bindings = <
-&trans  &kp COMMA     &kp N7        &kp N8        &kp N9       &kp STAR      &kp DEL        &kp LBKT   &kp UP    &kp RBKT   &none  &bootloader
-&trans  &kp SLASH     &kp N4        &kp N5        &kp N6       &kp MINUS     &kp BACKSPACE  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
-&trans  &mt LSHFT N0  &mt LCTRL N1  &kp N2        &kp N3       &kp PLUS      &kp DOT        &kp COMMA  &none     &none      &none  &none
-                                    &mt LALT DOT  &mt LCMD N0  &kp SPACE     &kp ENTER      &kp ESC    &none
+&trans  &trans  &trans  &trans  &trans  &trans      &kp DEL        &kp LBKT   &kp UP    &kp RBKT   &none  &bootloader
+&trans  &trans  &trans  &trans  &trans  &trans      &kp BACKSPACE  &kp LEFT   &kp DOWN  &kp RIGHT  &none  &none
+&trans  &trans  &trans  &trans  &trans  &trans      &kp DOT        &kp COMMA  &none     &none      &none  &none
+                        &trans  &trans  &trans      &trans         &trans    &none
             >;
         };
 
@@ -71,10 +72,10 @@
 
         left_nav {
             bindings = <
-&trans  &none      &kp LBKT   &kp UP      &kp RBKT     &kp DEL        &kp STAR   &kp N7   &kp N8     &kp N9  &none  &none
-&trans  &none      &kp LEFT   &kp DOWN    &kp RIGHT    &kp BACKSPACE  &kp MINUS  &kp N4   &kp N5     &kp N6  &none  &none
-&trans  &kp LSHFT  &kp LCTRL  &kp ESC     &none        &none          &kp PLUS   &kp N1   &kp N2     &kp N3  &none  &none
-                              &trans      &trans       &kp ENTER      &kp ENTER  &kp DOT  &kp N0
+&trans  &none      &kp LBKT   &kp UP      &kp RBKT     &kp DEL        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &none      &kp LEFT   &kp DOWN    &kp RIGHT    &kp BACKSPACE  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LSHFT  &kp LCTRL  &kp ESC     &none        &none          &trans  &trans  &trans  &trans  &trans  &trans
+                              &trans      &trans       &kp ENTER      &trans  &trans  &trans
             >;
         };
     };
